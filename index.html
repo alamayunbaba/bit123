@@ -1,0 +1,176 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>比特贴吧</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+		<script src="js/jquery.min.js" defer="defer"></script>
+		<script src="js/nebPay.js" defer="defer"></script>
+		<script src="js/nebulas.js" defer="defer"></script>
+	</head>
+	<body class="homepage">
+		<div id="page-wrapper">
+			<!-- Header -->
+				<div id="header-wrapper">
+					<header id="header" class="container">
+
+						<!-- Logo -->
+							<div id="logo">
+								<h1><a href="index.html">Bit123</a></h1>
+							</div>
+							<nav id="nav">
+								<ul>
+									<li style="white-space: nowrap;"><a href="javascript:void(0);">没有官方运营，完全社区自治的贴吧！12300个贴吧永不增发</a></li>
+									<li class="current" style="white-space: nowrap;"><a href="study.html">图文教程>></a></li>
+								</ul>
+							</nav>
+					</header>
+				</div>
+
+			<!-- Banner -->
+				<div id="banner-wrapper">
+					<div id="banner" class="box container">
+						<div class="row">
+							<div class="7u 12u(medium)">
+								<h2>交易排行榜</h2>
+								<div id="dragonlist"></div>
+								<p style="margin-top: 15px;font-size: 18px;">公告：<a href="study.html#stu6">出现“insufficient gas”错误的解决方法</a></p>
+							</div>
+							<div class="5u 12u(medium)">
+								<ul>
+									<li><a href="tieba.html" class="button big icon fa-arrow-circle-right">进入贴吧</a></li>
+									<li><a href="https://github.com/ChengOrangeJu/WebExtensionWallet" target="_blank" class="button alt big icon fa-question-circle">安装钱包</a></li>
+								</ul>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+			<!-- Features -->
+				<div id="features-wrapper">
+					<div class="container">
+						<div class="row">
+							<div class="4u 12u(medium)">
+
+								<!-- Box -->
+									<section class="box feature">
+										<div class="inner">
+											<header>
+												<h2>交易市场</h2>
+												<p><span id="allselltbnum">0</span>个贴吧正在出售</p>
+											</header>
+											<div id="allselltblist"></div>
+											<p style="height: 22px;"><a href="sales.html">查看全部</a></p>
+										</div>
+									</section>
+
+							</div>
+							<div class="4u 12u(medium)">
+
+								<!-- Box -->
+									<section class="box feature">
+										<div class="inner">
+											<header>
+												<h2>抢注&nbsp;#<span id="currdrowno"></span>&nbsp;贴吧</h2>
+												<p>每约6分钟产生一个贴吧，如有多人抢注，通过抽签赢取该贴吧。由运行在星云链上的智能合约随机产生一个中签号码。</p>
+											</header>
+											<p><br></p>
+											<p style="font-size:32px;text-align:center;font-weight:bold;height:92px;" id="disdrowtime"></p>
+											<p style="text-align:center;font-weight:bold;" id="witecontxt"><br></p>
+											<p style="text-align:center"><span style="display:none;" id="mydrownospan">您本次领取的号码为：<span id="mydrownospantxt" style="color:#0090c5;font-weight:bold;font-size:26px;"></span></span>&nbsp;</p>
+											<p style="text-align:center"><a href="javascript:void(0);" id="usertakeno" class="button icon fa-file-text-o">领取号码</a>&nbsp;</p>
+											<p style="text-align:center">共有<span id="alldrawnudis">0</span>人参与本次抽签<br>若您领取的号码与智能合约抽取的号码一致，则抢注成功！</p>
+										</div>
+									</section>
+
+							</div>
+							<div class="4u 12u(medium)">
+
+								<!-- Box -->
+									<section class="box feature">
+										<div class="inner">
+											<header>
+												<h2>中签记录</h2>
+											</header>
+											<div id="allusertblist"></div>
+										</div>
+									</section>
+
+							</div>
+							<div class="4u 12u(medium)">
+
+								<!-- Box -->
+									<section class="box feature">
+										<div class="inner">
+											<header>
+												<h2>我的贴吧</h2>
+											</header>
+											<div id="mytblist"></div>
+										</div>
+									</section>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+			<!-- Main -->
+				<div id="main-wrapper">
+					<div class="container">
+						<div class="row 200%">
+							<div class="4u 12u(medium)">
+
+								<!-- Sidebar -->
+									<div id="sidebar">
+										<section class="widget thumbnails">
+											<h3>吧主信息</h3>
+											钱包：<span id="ownaddr"></span><br>
+											昵称：<input id="ownickname" type="text">&nbsp;&nbsp;
+											<a href="javascript:void(0);" id="modinickname" class="button icon fa-file-text-o">修改</a>
+										</section>
+									</div>
+
+							</div>
+
+						</div>
+					</div>
+				</div>
+<div class="jq-alert" id="jq-alert"><div class="alert">
+<div id="jq-alert-text" class="content">
+#<span id="tiebmoditbid"></span>&nbsp;贴吧<br><br>
+贴吧名：<input id="tiebmodiname" type="text">
+简介：<input id="tiebmodiintr" type="text">
+<br><br>
+</div>
+<div class="fd-btn" id="jqalertfdbtn"><a href="javascript:void(0);" class="confirm" id="yes_btn">提&nbsp;&nbsp;交</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:void(0);" class="confirm" id="no_btn">取&nbsp;&nbsp;消</a><br><br></div>
+</div></div>
+
+<div class="jq-alert" id="jq-alert-sell"><div class="alert">
+<div class="content">
+#<span id="tiebselltbid"></span>&nbsp;.&nbsp;&nbsp;<span id="tiebsellname"></span><br><br>
+售价：<input id="tiebsellprice" type="text">&nbsp;NAS
+<br><br>
+</div>
+<div class="fd-btn" id="jqalertfdbtn"><a href="javascript:void(0);" class="confirm" id="sellyes_btn">上架出售</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:void(0);" class="confirm" id="sellno_btn">取&nbsp;&nbsp;消</a><br><br></div>
+</div></div>
+			
+<div id="modalprog" class="fade loading modal listen-to-bs-shown marked-for-close" style="top:100px;display: none;">
+<div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+					<div id="modaltext">正在执行合约</div>
+                    <div class="progress">
+                        <div  id="modalprogwidth" class="progress-bar progress-bar-striped progress-bar-animated" style="width: 10%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<div class="jq-alertprog" ></div>
+    </div>
+<script src="js/index.js" defer="defer"></script>
+
+	</body>
+</html>
