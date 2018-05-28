@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>比特贴吧</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+		<script src="js/jquery.min.js" defer="defer"></script>
+		<script src="js/nebPay.js" defer="defer"></script>
+		<script src="js/nebulas.js" defer="defer"></script>
+	</head>
+	<body class="homepage">
+		<div id="page-wrapper">
+			<!-- Header -->
+				<div id="header-wrapper">
+					<header id="header" class="container">
+
+						<!-- Logo -->
+							<div id="logo">
+								<h1><a href="index.html">Bit123</a></h1>
+							</div>
+							<nav id="nav">
+								<ul>
+									<li style="white-space: nowrap;"><a href="index.html">贴吧广场</a></li>
+									<li class="current" style="white-space: nowrap;"><a href="study.html">图文教程>></a></li>
+								</ul>
+							</nav>
+					</header>
+				</div>
+
+			<!-- Banner -->
+				
+
+			<!-- Features -->
+				<div id="features-wrapper">
+					<div class="container">
+						<div class="row">
+							<div class="4u 12u(medium)">
+
+								<!-- Box -->
+									<section class="box feature">
+										<div class="inner">
+											<header>
+												<h2>交易市场</h2>
+												<p><span id="allselltbnum">0</span>个贴吧正在出售</p>
+											</header>
+											<div id="allselltblist"></div>
+										</div>
+									</section>
+
+							</div>
+							
+							<div class="4u 12u(medium)">
+
+								<!-- Box -->
+									<section class="box feature">
+										<div class="inner">
+											<header>
+												<h2>成功交易</h2>
+											</header>
+											<div id="dragonlist"></div>
+										</div>
+									</section>
+
+							</div>
+							
+						</div>
+					</div>
+				</div>
+
+			
+<div id="modalprog" class="fade loading modal listen-to-bs-shown marked-for-close" style="top:100px;display: none;">
+<div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+					<div id="modaltext">正在执行合约</div>
+                    <div class="progress">
+                        <div  id="modalprogwidth" class="progress-bar progress-bar-striped progress-bar-animated" style="width: 10%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<div class="jq-alertprog" ></div>
+    </div>
+		<!-- Scripts -->
+<script src="js/sales.js" defer="defer"></script>
+
+	</body>
+</html>
